@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="/static/style.css">
+
+    </head>
+
+    <body>
+
+        <div class="jumbotron">
+            <h1 class="display-4">The Fish Market</h1>
+            <br>
+            <p class="lead">This web application uses linear regression to calculate fish weight in the market </p>
+            <hr class="my-4">
+            <p class="lead">To reach the original source of data</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="https://www.kaggle.com/datasets/alincijov/fish-dataset?resource=download" role="Link">Source</a>
+            </p>
+
+          </div>
+
+          <div class = "input_form">
+          <form action="/calculate" , method = "POST">
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="Length">Length</label>
+                    <input type="text" class="form-control is-invalid" name="Length" id="Length" placeholder="10" required>
+                    <div class="invalid-feedback">
+
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mb-3">
+                    <label for="Height">Height</label>
+                    <input type="text" class="form-control is-invalid" name ="Height" id="Height" placeholder="10" required>
+                    <div class="invalid-feedback">
+
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mb-3">
+                    <label for="Width">Width</label>
+                    <input type="text" class="form-control is-invalid" name = "Width" id="Width" placeholder="10" required>
+                    <div class="invalid-feedback">
+
+                    </div>
+                  </div>
+
+
+            </div>
+               <div class="col-md-3 mb-3">
+                <label for="species">Species</label>
+
+                <select class="form-control is-invalid" id="species" placeholder="species" required name="specie">
+                    <option value="0">Bream</option>
+                    <option value="1">Roach</option>
+                    <option value="2">Whitefish</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please Choose from these options
+                </div>
+              </div>
+
+            <div class="form-group">
+              <div class="form-check">
+                <div class="invalid-feedback">
+
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </form>
+        </div>
+
+        <br><b><h4 align="center"<b>{{pred}}</b></h4><br>
+
+    </body>
+
+</html>
