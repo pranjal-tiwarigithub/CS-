@@ -1,5 +1,5 @@
 # The Fish Market
-#### Video Demo:  <https://youtu.be/7r9fjNLjTF8>
+
 #### Description:
 
 
